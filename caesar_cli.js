@@ -1,5 +1,3 @@
-const { argsExtractor } = require('./helpers');
+const { argsExtractor, codeChar } = require('./helpers');
 
-argsExtractor();
-
-console.log(argsExtractor);
+'This is secret.'.split('').forEach((letter) => console.log(codeChar(letter, 7)));

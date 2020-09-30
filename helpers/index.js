@@ -1,3 +1,4 @@
 const argsExtractor = require('./argsExtractor');
+const codeChar = require('./caesarCipher');
 
-module.exports = { argsExtractor };
+module.exports = { argsExtractor, codeChar };
