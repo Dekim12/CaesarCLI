@@ -19,6 +19,9 @@ const startCode = (err, args) => {
     pipeline(readStream, transformStream, writeStream, (err) => {
       if (err) {
         process.stderr.write(`\nError: Sorry, something went wrong.\n\n`);
+        process.exit(1);
+      } else {
+        process.stdin.write(`\nSuccess!\n\n`);
       }
     });
   }

@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { pipeline, Transform } = require('stream');
+const { Transform } = require('stream');
 
 const { toCode } = require('../helpers');
 
