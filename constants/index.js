@@ -9,6 +9,11 @@ const ARGS_NAMES = {
   '-a': 'action',
 };
 
+const ACTIONS = {
+  encode: 'encode',
+  decode: 'decode',
+};
+
 const CHAR_COUNT = 26;
 
 const UPPERCASE_CHAR_RANGE = {
@@ -21,4 +26,4 @@ const LOWERCASE_CHAR_RANGE = {
   max: 122,
 };
 
-module.exports = { ARGS_NAMES, CHAR_COUNT, UPPERCASE_CHAR_RANGE, LOWERCASE_CHAR_RANGE };
+module.exports = { ARGS_NAMES, CHAR_COUNT, UPPERCASE_CHAR_RANGE, LOWERCASE_CHAR_RANGE, ACTIONS };

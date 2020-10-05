@@ -1,4 +1,5 @@
 const argsExtractor = require('./argsExtractor');
-const codeChar = require('./caesarCipher');
+const toCode = require('./caesarCipher');
+const validateArguments = require('./argumentsValidator');
 
-module.exports = { argsExtractor, codeChar };
+module.exports = { argsExtractor, toCode, validateArguments };

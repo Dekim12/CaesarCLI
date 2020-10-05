@@ -1,0 +1,8 @@
+{
+  "name": "caesarCli",
+  "version": "1.0.0",
+  "main": "caesar_cli.js",
+  "repository": "https://github.com/Dekim12/CaesarCLI.git",
+  "author": "dekim12",
+  "license": "MIT"
+}

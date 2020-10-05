@@ -6,7 +6,7 @@ const defineIsLetter = (charCode) =>
 
 const defineIsLowercase = (charCode) => charCode >= LOWERCASE_CHAR_RANGE.min;
 
-const codeChar = (char, shift) => {
+const codeChar = (char, shift = 0) => {
   const charCode = char.charCodeAt();
 
   if (!defineIsLetter(charCode)) {
@@ -18,12 +18,18 @@ const codeChar = (char, shift) => {
   let encodedCharCode = charCode - codeDifference + shift;
 
   if (encodedCharCode >= CHAR_COUNT) {
-    encodedCharCode -= CHAR_COUNT;
+    encodedCharCode %= CHAR_COUNT;
   } else if (encodedCharCode < 0) {
-    encodedCharCode += CHAR_COUNT;
+    encodedCharCode = (encodedCharCode % CHAR_COUNT) + CHAR_COUNT;
   }
 
   return String.fromCharCode(codeDifference + encodedCharCode);
 };
 
-module.exports = codeChar;
+const toCode = (input, shift) =>
+  input
+    .split('')
+    .map((char) => codeChar(char, shift))
+    .join('');
+
+module.exports = toCode;
